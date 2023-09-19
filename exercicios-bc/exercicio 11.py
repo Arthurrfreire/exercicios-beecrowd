@@ -19,11 +19,3 @@ valor_unitario2 = float(valor_unitario2)
 total_a_pagar = (num_peca1 * valor_unitario1) + (num_peca2 * valor_unitario2)
 
 print(f"VALOR A PAGAR: R$ {total_a_pagar:.2f}")
-
-
-
-
-
-
-
-
