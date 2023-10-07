@@ -6,9 +6,12 @@ O arquivo de entrada contém um valor inteiro N (0 < N < 1000000).
 Saída
 Imprima o valor lido e, em seguida, a quantidade mínima de notas de cada tipo necessárias, conforme o exemplo fornecido. Não esqueça de imprimir o fim de linha após cada linha, caso contrário seu programa apresentará a mensagem: “Presentation Error”.'''
 
-valor = int(input())
-cedulas = [100, 50, 20, 10, 5, 2, 1]
-for cedula in cedulas:
-    qtd_cedulas = valor // cedula
-    valor %= cedula
-    print('{} nota (s) de R$ {:.2f}'.format(qtd_cedulas, cedula).replace('.', ','))
+N = int(input())
+valor = N
+notas = [100, 50, 20, 10, 5, 2, 1]
+cont = 0
+print(valor)
+for i in range(len(notas)):
+    cont = N // notas[i]
+    N %= notas[i]
+    print('{} nota(s) de R$ {},00'.format(cont, notas[i]))
